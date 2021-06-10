@@ -1,0 +1,53 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to my world of books!!!!
+
+  // Wrapper
+  #wrapper
+
+    // book INFO
+    #bookInfo
+      h2 Book Info
+      p
+        strong Name:
+        |  <span id='bookInfoName'></span>
+        br
+        strong Author:
+        |  <span id='bookInfoAuthor'></span>
+        br
+        strong Genre:
+        |  <span id='bookInfoGenre'></span>
+        br
+        strong Year:
+        |  <span id='bookInfoYear'></span>
+    // /book INFO
+
+    // book LIST
+    h2 Book List
+    #bookList
+      table
+        thead
+          th Book
+          th Author
+          th Delete?
+        tbody
+    // /book LIST
+
+    // ADD book
+    h2 Add book
+    #addbook
+      fieldset
+        input#inputbookname(type='text', placeholder='Book Name')
+        input#inputbookauthor(type='text', placeholder='Author')
+        br
+        br
+        input#inputbookgenre(type='text', placeholder='Genre')
+        input#inputbookyear(type='text', placeholder='Year')
+        br
+        br
+        button#btnAddbook Add Book
+    // /ADD book
+
+  // /WRAPPER
